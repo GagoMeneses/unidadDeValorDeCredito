@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de UVC e IDI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Unidad de Valor de Crédito (UVC) e Índice de Inversión (IDI)</h1>
+        <form id="calculationForm">
+            <label for="monto">Monto en Bolívares:</label>
+            <input type="number" id="monto" required>
+
+            <label for="fecha">Fecha (YYYY-MM-DD):</label>
+            <input type="date" id="fecha" required>
+
+            <label for="tipoCredito">Tipo de Crédito:</label>
+            <select id="tipoCredito" required>
+                <option value="comercial">Comercial</option>
+                <option value="microcredito">Microcrédito</option>
+                <option value="moneda_nacional">Moneda Nacional</option>
+            </select>
+
+            <label for="plazo">Plazo (meses):</label>
+            <input type="number" id="plazo" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="result">
+            <p>Fecha de IDI utilizado: <span id="idiFecha"></span></p>
+            <p>Valor de IDI utilizado: <span id="idiValor"></span></p>
+            <p>El valor en UVC es: <span id="uvcResult"></span></p>
+            <p>Los intereses son: <span id="interestResult"></span></p>
+        </div>
+
+        <button id="resetButton">Reiniciar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
